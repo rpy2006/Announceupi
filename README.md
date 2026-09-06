@@ -142,7 +142,7 @@ app/src/main/java/com/announceupi/in/
 
 ```bash
 # Clone the project
-git clone https://github.com/yourusername/announceupi.git
+git clone https://github.com/rpy2006/announceupi.git
 
 # Open in Android Studio and sync Gradle
 # Or build from terminal:
