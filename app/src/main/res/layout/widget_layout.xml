@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FILE: app/src/main/res/layout/widget_layout.xml -->
+<!-- 1:1 square widget — all content vertically + horizontally centered -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:padding="12dp">
+
+    <!-- ── Refresh button (top-right) ── -->
+    <TextView
+        android:id="@+id/widgetRefresh"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:text="&#8635;"
+        android:textSize="16sp"
+        android:textColor="#3DDC84"
+        android:background="@android:color/transparent"/>
+
+    <!-- ── App label (top-left) ── -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="3dp"
+        android:text="AnnounceUPI"
+        android:textSize="9sp"
+        android:textColor="#3DDC84"/>
+
+    <!-- ── Centre group: label + amount + count + last ── -->
+    <LinearLayout
+        android:id="@+id/widgetCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- TODAY'S TOTAL label -->
+        <TextView
+            android:id="@+id/widgetLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TODAY'S TOTAL"
+            android:textSize="8sp"
+            android:letterSpacing="0.08"
+            android:textColor="#888888"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- Big amount -->
+        <TextView
+            android:id="@+id/widgetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#x20B9;0"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#F2F2F2"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- Payment count -->
+        <TextView
+            android:id="@+id/widgetCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 payments today"
+            android:textSize="10sp"
+            android:textColor="#3DDC84"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Last payment -->
+        <TextView
+            android:id="@+id/widgetLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Waiting for payment..."
+            android:textSize="9sp"
+            android:textColor="#666666"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+    <!-- ── Date (bottom-center) ── -->
+    <TextView
+        android:id="@+id/widgetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:text=""
+        android:textSize="8sp"
+        android:textColor="#555555"/>
+
+</RelativeLayout>

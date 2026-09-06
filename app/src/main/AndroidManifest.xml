@@ -1,0 +1,108 @@
+<!-- FILE: app/src/main/AndroidManifest.xml -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.announceupi.in">
+
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AnnounceUPI"
+        android:supportsRtl="true">
+
+        <!-- Splash screen — LAUNCHER entry point -->
+        <activity android:name=".SplashActivity" android:exported="true"
+            android:theme="@style/Theme.AnnounceUPI.Splash"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Login / Google Sign-In -->
+        <activity android:name=".LoginActivity" android:exported="false"
+            android:theme="@style/Theme.AnnounceUPI.Splash"/>
+
+        <!-- MainActivity -->
+        <activity android:name=".MainActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- More Options -->
+        <activity android:name=".MoreOptionsActivity" android:exported="false"
+            android:label="More Options" android:parentActivityName=".MainActivity"/>
+
+        <!-- Monthly Chart -->
+        <activity android:name=".MonthlyChartActivity" android:exported="false"
+            android:label="Monthly Summary" android:parentActivityName=".MoreOptionsActivity"/>
+
+        <!-- Notification Listener Service -->
+        <service android:name=".PaymentNotificationService" android:exported="true"
+            android:label="AnnounceUPI Listener"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+
+        <!-- WhatsApp action receiver for daily summary -->
+        <receiver android:name=".WhatsAppActionReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.announceupi.in.SEND_WHATSAPP"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Boot receiver — restarts widget alarm after phone reboot -->
+        <receiver android:name=".BootReceiver" android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- SMS Receiver -->
+        <receiver android:name=".SmsReceiver" android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Home Screen Widget -->
+        <receiver android:name=".AnnounceUPIWidget" android:exported="true"
+            android:label="AnnounceUPI Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.announceupi.in.WIDGET_REFRESH"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/announce_upi_widget_info"/>
+        </receiver>
+
+        <!-- FileProvider for CSV export sharing -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>

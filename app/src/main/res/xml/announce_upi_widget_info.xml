@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FILE: app/src/main/res/xml/announce_upi_widget_info.xml -->
+
+<appwidget-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:minWidth="180dp"
+    android:minHeight="180dp"
+
+    android:minResizeWidth="120dp"
+    android:minResizeHeight="120dp"
+
+    android:initialLayout="@layout/widget_layout"
+
+    android:updatePeriodMillis="0"
+
+    android:widgetCategory="home_screen"
+
+    android:description="@string/widget_description"
+
+    android:previewImage="@mipmap/ic_launcher"
+
+    android:resizeMode="horizontal|vertical"/>
+
+<!--
+    1:1 square widget — minWidth == minHeight == 180dp.
+    minResizeWidth == minResizeHeight == 120dp keeps it square when resized.
+    updatePeriodMillis=0 — updated manually after each payment via
+    AnnounceUPIWidget.updateAllWidgets().
+-->

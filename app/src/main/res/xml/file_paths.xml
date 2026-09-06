@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FILE: app/src/main/res/xml/file_paths.xml -->
+<!-- Required by FileProvider for CSV export sharing -->
+<paths>
+    <cache-path name="shared_files" path="."/>
+</paths>

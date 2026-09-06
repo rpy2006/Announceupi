@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="#3DDC84"
+     android:orientation="vertical">
+
+    <LinearLayout
+         android:layout_height="0dp"
+         android:layout_width="match_parent"
+         android:gravity="center"
+         android:orientation="vertical"
+         android:paddingBottom="24dp"
+         android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+             android:layout_height="350dp"
+             android:layout_width="350dp"
+             android:layout_marginBottom="16dp"
+             app:srcCompat="@raw/upi"
+             android:layout_gravity="center" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="28sp"
+             android:textColor="#FFFFFF"
+             android:letterSpacing="0.02"
+             android:layout_gravity="center"
+             android:text="AnnounceUPI"
+             android:textStyle="bold" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="13sp"
+             android:textColor="#CCFFFFFF"
+             android:layout_marginTop="6dp"
+             android:layout_gravity="center"
+             android:text="Your UPI Payment Announcer" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:paddingEnd="28dp"
+         android:background="@drawable/bg_login_card"
+         android:orientation="vertical"
+         android:paddingBottom="48dp"
+         android:paddingStart="28dp"
+         android:paddingTop="36dp">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="6dp"
+             android:textSize="24sp"
+             android:textColor="#111111"
+             android:text="Welcome"
+             android:textStyle="bold" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="32dp"
+             android:textSize="13sp"
+             android:textColor="#888888"
+             android:lineSpacingMultiplier="1.4"
+             android:text="Sign in to keep your payment history safe and synced" />
+
+        <LinearLayout
+             android:layout_height="54dp"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp"
+             android:gravity="center"
+             android:background="@drawable/bg_google_btn"
+             android:clickable="true"
+             android:elevation="2dp"
+             android:orientation="horizontal"
+             android:focusable="true"
+             android:id="@+id/btnGoogleSignIn">
+
+            <TextView
+                 android:layout_height="24dp"
+                 android:layout_width="24dp"
+                 android:layout_marginEnd="12dp"
+                 android:gravity="center"
+                 android:textSize="16sp"
+                 android:fontFamily="sans-serif-medium"
+                 android:textColor="#4285F4"
+                 android:text="G"
+                 android:textStyle="bold" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="15sp"
+                 android:textColor="#444444"
+                 android:text="Continue with Google"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="center"
+             android:padding="12dp"
+             android:textSize="13sp"
+             android:textColor="#888888"
+             android:id="@+id/tvSkipLogin"
+             android:text="Continue without signing in" />
+
+        <ProgressBar
+             android:layout_height="36dp"
+             android:layout_width="36dp"
+             android:visibility="gone"
+             android:layout_marginTop="8dp"
+             android:id="@+id/progressLogin"
+             android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

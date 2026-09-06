@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FILE: app/src/main/res/drawable/ic_splash_logo.xml -->
+<!--
+    AnnounceUPI splash logo: green circle background + white ₹ symbol
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Green circle background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#3DDC84"/>
+            <size android:width="120dp" android:height="120dp"/>
+        </shape>
+    </item>
+
+    <!-- ₹ symbol as white vector paths, inset to center in the circle -->
+    <item
+        android:left="28dp"
+        android:top="24dp"
+        android:right="28dp"
+        android:bottom="24dp">
+        <vector
+            android:width="64dp"
+            android:height="72dp"
+            android:viewportWidth="64"
+            android:viewportHeight="72">
+
+            <!-- Top horizontal bar -->
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M4,6 H60 Q64,6 64,11 Q64,16 60,16 H4 Z"/>
+
+            <!-- Second horizontal bar -->
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M4,22 H52 Q56,22 56,27 Q56,32 52,32 H4 Z"/>
+
+            <!-- Vertical left stroke -->
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M4,6 H14 V70 H4 Z"/>
+
+            <!-- Diagonal slash -->
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M50,32 L14,68 Q11,72 6,70 Q1,67 4,63 L40,27 Z"/>
+
+        </vector>
+    </item>
+
+</layer-list>

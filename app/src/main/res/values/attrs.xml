@@ -1,0 +1,27 @@
+<!-- FILE: app/src/main/res/values/attrs.xml -->
+<!--
+    ONLY declares attrs that do NOT already exist in Material Components.
+
+    The following are ALREADY defined by Material / AppCompat, do NOT redeclare them:
+        colorBackground, colorSurface, colorOnBackground, colorOnSurface,
+        colorPrimary, colorSecondary, colorError …
+
+    Only our truly custom attrs live here.
+    They are set in themes.xml and resolved via ?attr/ in layouts.
+-->
+
+<resources>
+
+    <!-- Card / row border stroke color (not in Material) -->
+    <attr name="colorSurfaceStroke"  format="color"/>
+
+    <!-- Subdued secondary label text (not in Material) -->
+    <attr name="colorSecondaryText"  format="color"/>
+
+    <!-- Muted / placeholder / tertiary text (not in Material) -->
+    <attr name="colorTertiaryText"   format="color"/>
+
+    <!-- Bottom navigation bar background (not in Material) -->
+    <attr name="colorBottomBar"      format="color"/>
+
+</resources>

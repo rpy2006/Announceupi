@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FILE: app/src/main/res/layout/activity_more_options.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp"
+        android:background="?attr/colorSurface"
+        android:elevation="2dp">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnMoreBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_arrow_back"
+            app:tint="?attr/colorOnBackground"
+            android:contentDescription="Back"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="More Options"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnBackground"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ══ SECTION: ANNOUNCEMENT ══ -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ANNOUNCEMENT" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="?attr/colorSecondaryText"
+                android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+
+            <!-- Language -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardLanguage"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp"
+                    android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_language" app:tint="#3DDC84"
+                        android:layout_marginEnd="16dp" android:contentDescription="Language"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Language" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:id="@+id/tvCurrentLang" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="English" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="16dp" android:layout_height="16dp"
+                        app:srcCompat="@drawable/ic_arrow_forward" app:tint="?attr/colorSecondaryText" android:contentDescription="Open"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Speed -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                            app:srcCompat="@drawable/ic_speed" app:tint="#5B9CF6"
+                            android:layout_marginEnd="16dp" android:contentDescription="Speed"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Announcement Speed" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:id="@+id/tvSpeedLabel" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Normal" android:textSize="12sp" android:textColor="#3DDC84" android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginStart="38dp">
+                        <TextView android:id="@+id/btnSpeedSlow" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+                            android:gravity="center" android:text="Slow" android:textSize="13sp" android:textColor="#888888"
+                            android:background="@drawable/chip_unselected" android:layout_marginEnd="6dp"/>
+                        <TextView android:id="@+id/btnSpeedNormal" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+                            android:gravity="center" android:text="Normal" android:textSize="13sp" android:textColor="#0A0A0A"
+                            android:background="@drawable/chip_selected" android:layout_marginEnd="6dp"/>
+                        <TextView android:id="@+id/btnSpeedFast" android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+                            android:gravity="center" android:text="Fast" android:textSize="13sp" android:textColor="#888888"
+                            android:background="@drawable/chip_unselected"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Repeat -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_repeat" app:tint="#F5A623" android:layout_marginEnd="16dp" android:contentDescription="Repeat"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Repeat Announcement" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Speak the amount twice in a row" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchRepeat"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Minimum Amount -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardMinAmount"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_filter" app:tint="#F06292" android:layout_marginEnd="16dp" android:contentDescription="Filter"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Minimum Amount Filter" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:id="@+id/tvMinAmount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="All amounts" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="16dp" android:layout_height="16dp"
+                        app:srcCompat="@drawable/ic_arrow_forward" app:tint="?attr/colorSecondaryText" android:contentDescription="Open"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- DND -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardDnd"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_dnd" app:tint="#888888" android:layout_marginEnd="16dp" android:contentDescription="DND"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Do Not Disturb" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:id="@+id/tvDndTime" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="10:00 PM – 7:00 AM" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchDnd"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ══ SECTION: TRANSACTIONS ══ -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="TRANSACTIONS" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="?attr/colorSecondaryText"
+                android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+
+            <!-- Copy on tap -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_copy" app:tint="#26D4BF" android:layout_marginEnd="16dp" android:contentDescription="Copy"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Copy Amount on Tap" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Tap any transaction row to copy amount" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchCopyAmount"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Share -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_share" app:tint="#F06292" android:layout_marginEnd="16dp" android:contentDescription="Share"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Share Transaction" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Long-press a row to share via WhatsApp etc." android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchShare"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Note -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="28dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_note" app:tint="#F5A623" android:layout_marginEnd="16dp" android:contentDescription="Note"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Transaction Notes" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Double-tap a transaction row to add a note" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchNote"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ══ SECTION: ANALYTICS & EXPORT ══ -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ANALYTICS &amp; EXPORT" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="?attr/colorSecondaryText"
+                android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+
+            <!-- Monthly Chart -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardMonthly"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_chart" app:tint="#5B9CF6" android:layout_marginEnd="16dp" android:contentDescription="Chart"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Monthly Chart" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Bar chart of daily totals for this month" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="16dp" android:layout_height="16dp"
+                        app:srcCompat="@drawable/ic_arrow_forward" app:tint="?attr/colorSecondaryText" android:contentDescription="Open"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Export CSV -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardExport"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_export" app:tint="#3DDC84" android:layout_marginEnd="16dp" android:contentDescription="Export"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Export as CSV" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Save to Drive, WhatsApp, or Gmail" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="16dp" android:layout_height="16dp"
+                        app:srcCompat="@drawable/ic_arrow_forward" app:tint="?attr/colorSecondaryText" android:contentDescription="Export"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Daily Summary -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="28dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_bell" app:tint="#F5A623" android:layout_marginEnd="16dp" android:contentDescription="Summary"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Daily Summary at 9 PM" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Nightly notification with today's total" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchDailySummary"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ══ SECTION: SECURITY ══ -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="SECURITY" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="?attr/colorSecondaryText"
+                android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+
+            <!-- App Lock -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="28dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_lock" app:tint="#3DDC84" android:layout_marginEnd="16dp" android:contentDescription="Lock"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="App Lock" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Fingerprint or PIN required to open app" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchLock"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ══ SECTION: HOME SCREEN ══ -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="HOME SCREEN" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="?attr/colorSecondaryText"
+                android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+
+            <!-- App Shortcuts -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardShortcut"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="14dp"
+                app:cardElevation="0dp" app:strokeColor="?attr/colorSurfaceStroke" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="64dp" android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="12dp" android:paddingBottom="12dp">
+                    <androidx.appcompat.widget.AppCompatImageView android:layout_width="22dp" android:layout_height="22dp"
+                        app:srcCompat="@drawable/ic_shortcut" app:tint="#3DDC84" android:layout_marginEnd="16dp" android:contentDescription="Shortcut"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="App Shortcuts" android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/colorOnBackground"/>
+                        <TextView android:id="@+id/tvShortcutDesc" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Long-press app icon for quick actions" android:textSize="12sp" android:layout_marginTop="2dp" android:textColor="?attr/colorSecondaryText"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvShortcutBadge" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Active" android:textSize="11sp" android:textColor="#3DDC84" android:textStyle="bold"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

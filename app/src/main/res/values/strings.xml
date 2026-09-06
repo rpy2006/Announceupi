@@ -1,0 +1,19 @@
+<!-- FILE: app/src/main/res/values/strings.xml -->
+
+<resources>
+    <string name="app_name">AnnounceUPI</string>
+    <string name="no_transactions">No transactions yet.\nWaiting for a UPI payment…</string>
+    <string name="widget_description">Shows today\'s total UPI payments received at a glance</string>
+    <string name="settings_title">Settings</string>
+    <string name="language_section">Announcement Language</string>
+    <string name="haptic_title">Haptic Feedback</string>
+    <string name="haptic_desc">Vibrate phone on every payment received</string>
+    <string name="sms_title">SMS Fallback</string>
+    <string name="sms_desc">Detect payments from bank SMS when UPI app notification is unavailable</string>
+    <string name="clear_history">Clear History</string>
+    <string name="clear_confirm">Delete all transaction history? This cannot be undone.</string>
+    <string name="clear_button">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="history_cleared">History cleared</string>
+
+</resources>
