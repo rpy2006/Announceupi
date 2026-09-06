@@ -1,5 +1,21 @@
 # AnnounceUPI
 
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/megaphone-fill.svg" width="64" height="64" style="filter:invert(52%) sepia(97%) saturate(400%) hue-rotate(100deg);"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-6.0%2B-3DDC84?style=flat&logo=android&logoColor=white"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=flat&logo=openjdk&logoColor=white"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Version-2.0-blue?style=flat"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/License-Apache%202.0-lightgrey?style=flat"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Price-Free-3DDC84?style=flat"/>
+</p>
+
 > **Your UPI payments, announced out loud — the moment they arrive.**
 
 AnnounceUPI is a free Android app that listens for incoming UPI payment notifications and speaks the received amount aloud in your chosen language. Built for shop owners, vendors, and anyone who can't always look at their phone screen.
@@ -14,25 +30,25 @@ AnnounceUPI is a free Android app that listens for incoming UPI payment notifica
 
 ---
 
-## Features
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/lightning-fill.svg" width="20"/> Features
 
-### 🔊 Voice Announcement
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/megaphone-fill.svg" width="18"/> Voice Announcement
 - Speaks payment amount and source app the moment money arrives
 - Works with PhonePe, Google Pay, Paytm, and 20+ UPI apps
 - Runs silently in the background — no interaction needed
 - Requests audio focus before speaking so it's always heard
 
-### 🌐 Multi-Language Support
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/translate.svg" width="18"/> Multi-Language Support
 Announces in 10 Indian languages:
 Hindi · Tamil · Telugu · Kannada · Bengali · Marathi · Malayalam · Gujarati · Punjabi · English
 
-### 📊 Dashboard & Analytics
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/bar-chart-fill.svg" width="18"/> Dashboard & Analytics
 - Today's total, this month's total, all-time total
 - Daily bar chart (30-day view)
 - Weekly line chart (last 7 days)
 - Per-app payment breakdown
 
-### 📥 Transaction History
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/clock-history.svg" width="18"/> Transaction History
 - Full history of every payment with source, amount, time, date
 - Search by amount, app, or date
 - Add personal notes to any transaction (double-tap)
@@ -41,34 +57,34 @@ Hindi · Tamil · Telugu · Kannada · Bengali · Marathi · Malayalam · Gujara
 - Clear all history with one tap
 - Exports as CSV file
 
-### 📅 Daily Summary
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/calendar-check-fill.svg" width="18"/> Daily Summary
 - Push notification at a custom time showing day's total
 - Auto-send summary to a WhatsApp number with full breakdown
 - Configurable — enable/disable independently
 
-### 🌙 Do Not Disturb
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/moon-fill.svg" width="18"/> Do Not Disturb
 - Set quiet hours — no announcements between e.g. 10 PM and 7 AM
 - Minimum amount filter — skip payments below a set threshold
 
-### 🔒 Security
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/shield-lock-fill.svg" width="18"/> Security
 - Biometric / PIN app lock (fingerprint or device PIN)
 - 5-minute session — no re-prompt while actively using
 - Google Sign-In for account protection
 - All data stored locally on device — nothing sent to servers
 
-### 🏠 Home Screen Widget
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/grid-fill.svg" width="18"/> Home Screen Widget
 - 1×1 square widget showing today's total
 - Auto-refreshes every 10 seconds
 - Full 24-hour refresh via WorkManager
 - Survives phone reboots
 
-### 🔔 SMS Fallback
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/chat-text-fill.svg" width="18"/> SMS Fallback
 - Detects payments via SMS if notification access is unavailable
 - Parses standard bank SMS formats
 
 ---
 
-## Tech Stack
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/code-slash.svg" width="20"/> Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -86,52 +102,52 @@ Hindi · Tamil · Telugu · Kannada · Bengali · Marathi · Malayalam · Gujara
 
 ---
 
-## Project Structure
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/folder-fill.svg" width="20"/> Project Structure
 
 ```
 app/src/main/java/com/announceupi/in/
 │
-├── MainActivity.java               # Bottom nav host, fragment caching
-├── SplashActivity.java             # 1.8s splash screen
-├── LoginActivity.java              # Google Sign-In screen
+├── MainActivity.java # Bottom nav host, fragment caching
+├── SplashActivity.java # 1.8s splash screen
+├── LoginActivity.java # Google Sign-In screen
 │
-├── HomeFragment.java               # Transaction history + totals
-├── DashboardFragment.java          # Charts + CSV export
-├── SettingsFragment.java           # All settings and permissions
+├── HomeFragment.java # Transaction history + totals
+├── DashboardFragment.java # Charts + CSV export
+├── SettingsFragment.java # All settings and permissions
 │
 ├── PaymentNotificationService.java # Core: listens + announces UPI payments
-├── SmsReceiver.java                # SMS fallback detection
-├── TransactionAdapter.java         # RecyclerView adapter
+├── SmsReceiver.java # SMS fallback detection
+├── TransactionAdapter.java # RecyclerView adapter
 │
-├── GoogleAuthManager.java          # Google Sign-In helper
-├── LockManager.java                # Biometric session management
-├── DailySummaryWorker.java         # WorkManager daily summary job
-├── ExportManager.java              # CSV export via FileProvider
-├── AnnounceUPIWidget.java          # Home screen widget provider
-├── WidgetDailyWorker.java          # 24h widget refresh worker
-├── BootReceiver.java               # Restart alarms after reboot
-├── WhatsAppActionReceiver.java     # WhatsApp summary sender
-└── MonthlyChartActivity.java       # Full-screen chart view
+├── GoogleAuthManager.java # Google Sign-In helper
+├── LockManager.java # Biometric session management
+├── DailySummaryWorker.java # WorkManager daily summary job
+├── ExportManager.java # CSV export via FileProvider
+├── AnnounceUPIWidget.java # Home screen widget provider
+├── WidgetDailyWorker.java # 24h widget refresh worker
+├── BootReceiver.java # Restart alarms after reboot
+├── WhatsAppActionReceiver.java # WhatsApp summary sender
+└── MonthlyChartActivity.java # Full-screen chart view
 ```
 
 ---
 
-## Permissions
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/shield-fill-check.svg" width="20"/> Permissions
 
 | Permission | Why |
 |-----------|-----|
-| `BIND_NOTIFICATION_LISTENER_SERVICE` | Detect UPI payment notifications |
-| `RECEIVE_SMS` | SMS fallback payment detection |
-| `READ_SMS` | Read bank SMS content |
-| `INTERNET` | Google Sign-In, profile picture |
-| `RECEIVE_BOOT_COMPLETED` | Restart widget alarm after reboot |
-| `VIBRATE` | Haptic feedback on payment |
-| `POST_NOTIFICATIONS` | Daily summary notification (Android 13+) |
-| `USE_BIOMETRIC` | App lock |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/bell-fill.svg" width="14"/> `BIND_NOTIFICATION_LISTENER_SERVICE` | Detect UPI payment notifications |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/chat-fill.svg" width="14"/> `RECEIVE_SMS` | SMS fallback payment detection |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/chat-text-fill.svg" width="14"/> `READ_SMS` | Read bank SMS content |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/wifi.svg" width="14"/> `INTERNET` | Google Sign-In, profile picture |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/power.svg" width="14"/> `RECEIVE_BOOT_COMPLETED` | Restart widget alarm after reboot |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/phone-vibrate-fill.svg" width="14"/> `VIBRATE` | Haptic feedback on payment |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/bell-fill.svg" width="14"/> `POST_NOTIFICATIONS` | Daily summary notification (Android 13+) |
+| <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/fingerprint.svg" width="14"/> `USE_BIOMETRIC` | App lock |
 
 ---
 
-## Getting Started
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/rocket-takeoff-fill.svg" width="20"/> Getting Started
 
 ### Prerequisites
 - Android Studio / AndroidIDE
@@ -142,7 +158,7 @@ app/src/main/java/com/announceupi/in/
 
 ```bash
 # Clone the project
-git clone https://github.com/rpy2006/announceupi.git
+git clone https://github.com/yourusername/announceupi.git
 
 # Open in Android Studio and sync Gradle
 # Or build from terminal:
@@ -156,10 +172,10 @@ git clone https://github.com/rpy2006/announceupi.git
 3. Create an OAuth 2.0 Android client
 4. Enter package name: `com.announceupi.in`
 5. Enter your debug SHA-1:
-   ```bash
-   keytool -list -v -keystore ~/.android/debug.keystore \
-     -alias androiddebugkey -storepass android -keypass android
-   ```
+ ```bash
+ keytool -list -v -keystore ~/.android/debug.keystore \
+ -alias androiddebugkey -storepass android -keypass android
+ ```
 6. Place `google-services.json` in `app/`
 
 ### First Launch
@@ -171,13 +187,13 @@ git clone https://github.com/rpy2006/announceupi.git
 
 ---
 
-## Supported UPI Apps
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/phone-fill.svg" width="20"/> Supported UPI Apps
 
 PhonePe · Google Pay · Paytm · Amazon Pay · BHIM · MobiKwik · Freecharge · Jio Money · Airtel Money · PayZapp · iMobile · Yono SBI · BHIM SBI · Axis Pay · Kotak Pay · HDFC PayZapp · IndusInd · Bank of Baroda · Federal Bank · UCO Bank · and more
 
 ---
 
-## SharedPreferences Keys
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/database-fill.svg" width="20"/> SharedPreferences Keys
 
 | Key | Type | Default | Purpose |
 |-----|------|---------|---------|
@@ -201,43 +217,43 @@ PhonePe · Google Pay · Paytm · Amazon Pay · BHIM · MobiKwik · Freecharge �
 
 ```json
 {
-  "amount": "₹500",
-  "raw_amount": 500.0,
-  "source": "PhonePe",
-  "time": "10:30 PM",
-  "date": "17 Aug 2026",
-  "note": "Customer payment"
+ "amount": "₹500",
+ "raw_amount": 500.0,
+ "source": "PhonePe",
+ "time": "10:30 PM",
+ "date": "17 Aug 2026",
+ "note": "Customer payment"
 }
 ```
 
 ---
 
-## WhatsApp Daily Summary
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/whatsapp.svg" width="20"/> WhatsApp Daily Summary
 
 Enable in Settings → Notifications & Security → Send to WhatsApp.
 
 The summary is sent at your configured time and looks like this:
 
 ```
-💰 *AnnounceUPI Daily Summary*
-📅 17 Aug 2026
+*AnnounceUPI Daily Summary*
+Date: 17 Aug 2026
 
-✅ Total Received: *₹4,250.00*
-🔢 Transactions: *3*
+Total Received: *₹4,250.00*
+Transactions: *3*
 
-📊 *Breakdown:*
-  • PhonePe: ₹2,000.00
-  • Google Pay: ₹1,500.00
-  • Paytm: ₹750.00
+*Breakdown:*
+ - PhonePe: ₹2,000.00
+ - Google Pay: ₹1,500.00
+ - Paytm: ₹750.00
 
 _Sent by AnnounceUPI_
 ```
 
 ---
 
-## Version History
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/clock-history.svg" width="20"/> Version History
 
-### v2.0 (Current)
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/star-fill.svg" width="16"/> v2.0 (Current)
 - Bottom navigation — Home, Dashboard, Settings
 - Google Sign-In with profile picture
 - WhatsApp daily summary auto-send
@@ -249,7 +265,7 @@ _Sent by AnnounceUPI_
 - Beep sound fixed
 - Fragment caching for smooth navigation
 
-### v1.0
+### <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/flag-fill.svg" width="16"/> v1.0
 - Initial release
 - Core UPI announcement
 - Basic transaction history
@@ -257,7 +273,7 @@ _Sent by AnnounceUPI_
 
 ---
 
-## Known Limitations
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/exclamation-triangle-fill.svg" width="20"/> Known Limitations
 
 - Google Sign-In requires SHA-1 registration in Google Console
 - WhatsApp summary opens WhatsApp for the user to tap Send (cannot send silently due to Android restrictions)
@@ -266,16 +282,16 @@ _Sent by AnnounceUPI_
 
 ---
 
-## Developer
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/person-fill.svg" width="20"/> Developer
 
 **Rohit Prasad Yadav**
-- 📧 rohitprasadyadav06@gmail.com
-- 📸 [@rohiit.md](https://instagram.com/rohiit.md)
-- 🏢 Yadav Enterprises
+- <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/envelope-fill.svg" width="14"/> rohitprasadyadav06@gmail.com
+- <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/instagram.svg" width="14"/> [@rohiit.md](https://instagram.com/rohiit.md)
+- <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/building-fill.svg" width="14"/> Yadav Enterprises
 
 ---
 
-## License
+## <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/file-earmark-text-fill.svg" width="20"/> License
 
 ```
 Copyright 2026 Rohit Prasad Yadav — Yadav Enterprises
