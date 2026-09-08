@@ -1,19 +1,21 @@
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/rpy2006/Announceupi/main/Assets/file_00000000ac90822f9f19d95c8ba9821f.png" alt="AnnounceUPI Banner" width="100%">
+  <br><br>
 
-# 📣 AnnounceUPI
+  # 📣 AnnounceUPI
 
-**Your UPI payments, announced out loud — the moment they arrive.**
+  **Your UPI payments, announced out loud — the moment they arrive.**
 
-[![Download APK](https://img.shields.io/badge/⬇_Download_APK-v1.0.0-3DDC84?style=for-the-badge)](https://github.com/rpy2006/Announceupi/releases/download/v1.0.0/app-debug.apk)
-&nbsp;
-[![Android](https://img.shields.io/badge/Android-6.0%2B-3DDC84?style=flat&logo=android&logoColor=white)](https://android.com)
-&nbsp;
-[![Java](https://img.shields.io/badge/Java-17-ED8B00?style=flat&logo=openjdk&logoColor=white)](https://openjdk.org)
-&nbsp;
-[![Version](https://img.shields.io/badge/Version-2.0-5B9CF6?style=flat)](https://github.com/rpy2006/Announceupi/releases)
-&nbsp;
-[![Free](https://img.shields.io/badge/Free-No_Ads-3DDC84?style=flat)](https://github.com/rpy2006/Announceupi)
+  [![Download APK](https://img.shields.io/badge/⬇_Download_APK-v1.0.0-3DDC84?style=for-the-badge)](https://github.com/rpy2006/Announceupi/releases/download/v1.0.0/app-debug.apk)
+  &nbsp;
+  [![Android](https://img.shields.io/badge/Android-6.0%2B-3DDC84?style=flat&logo=android&logoColor=white)](https://android.com)
+  &nbsp;
+  [![Java](https://img.shields.io/badge/Java-17-ED8B00?style=flat&logo=openjdk&logoColor=white)](https://openjdk.org)
+  &nbsp;
+  [![Version](https://img.shields.io/badge/Version-2.0-5B9CF6?style=flat)](https://github.com/rpy2006/Announceupi/releases)
+  &nbsp;
+  [![Free](https://img.shields.io/badge/Free-No_Ads-3DDC84?style=flat)](https://github.com/rpy2006/Announceupi)
 
 </div>
 
