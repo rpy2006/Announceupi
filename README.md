@@ -3,8 +3,6 @@
   <img src="https://raw.githubusercontent.com/rpy2006/Announceupi/main/Assets/file_00000000ac90822f9f19d95c8ba9821f.png" alt="AnnounceUPI Banner" width="100%">
   <br><br>
 
-  # 📣 AnnounceUPI
-
   **Your UPI payments, announced out loud — the moment they arrive.**
 
   [![Download APK](https://img.shields.io/badge/⬇_Download_APK-v1.0.0-3DDC84?style=for-the-badge)](https://github.com/rpy2006/Announceupi/releases/download/v1.0.0/app-debug.apk)
